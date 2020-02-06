@@ -1,0 +1,13 @@
+name: Greetings
+
+on: [pull_request, issues]
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/first-interaction@v1
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        issue-message: 'Greetings, this is the repo for the ClassAssignments'' first issue'
+        pr-message: 'This message is to inform you that most of the work within this repo are from projects dated back from 2019 and 2020'' first pr'
